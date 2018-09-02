@@ -1,4 +1,4 @@
-// Copyright (c) 2012-2017 The Bitcoin Core developers
+// Copyright (c) 2012-2018 The Bitcoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -21,7 +21,7 @@ static void addCoin(const CAmount& nValue, const CWallet& wallet, std::vector<Ou
 
     int nAge = 6 * 24;
     COutput output(wtx, nInput, nAge, true /* spendable */, true /* solvable */, true /* safe */);
-    groups.emplace_back(output.GetInputCoin(), 0, false, 0, 0);
+    groups.emplace_back(output.GetInputCoin(), 6, false, 0, 0);
 }
 
 // Simple benchmark for wallet coin selection. Note that it maybe be necessary
